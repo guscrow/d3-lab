@@ -13,7 +13,8 @@ var data = [
 	animalMaker("angler fish","grey","0")
 ];
 
-var table = d3.select("body").append("table");
+var table = d3.select("body").append("table")
+
 
 var rows = table.selectAll("tr")
 		.data(data)
@@ -21,11 +22,14 @@ var rows = table.selectAll("tr")
 		.append("tr")
 
 
+
 rows.append("td")
-	.text(function(d) {return d.name});
+	.text(function(d) {return d.name})
+	.attr("style","font-family: Courier");
 
 rows.append("td")
 	.text(function(d) {return d.color});
 
 rows.append("td")
-	.text(function(d) {return d.cute});
+	.text(function(d) {return d.cute})
+	.style("background-color","cyan");
